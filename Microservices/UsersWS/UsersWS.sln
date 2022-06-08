@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Entities", "src\Enterprise Business Rules\Users.Entities\Users.Entities.csproj", "{61BB1539-07AC-489A-ADB3-201304959139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Entities", "src\Enterprise Business Rules\Users.Entities\Users.Entities.csproj", "{61BB1539-07AC-489A-ADB3-201304959139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Utils", "src\Enterprise Business Rules\Users.Utils\Users.Utils.csproj", "{13BAC74E-4FD6-4628-AD67-8904F0CD64B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Utils", "src\Enterprise Business Rules\Users.Utils\Users.Utils.csproj", "{13BAC74E-4FD6-4628-AD67-8904F0CD64B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Enterprise Business Rules", "0 - Enterprise Business Rules", "{7F1C6577-5DBD-4DD9-85E0-8B1C5DE320A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application Business Rules", "1 - Application Business Rules", "{E69A8A6C-7E55-4566-B6C5-9570944C2B38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.DTO", "src\Application Business Rules\Users.DTO\Users.DTO.csproj", "{8AFD89A5-E98D-41DB-A387-AB3818B4D114}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.DTO", "src\Application Business Rules\Users.DTO\Users.DTO.csproj", "{8AFD89A5-E98D-41DB-A387-AB3818B4D114}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.UseCases", "src\Application Business Rules\Users.UseCases\Users.UseCases.csproj", "{EFB2B521-D9B5-46C8-A1D5-A5DA1FD8A681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.UseCases", "src\Application Business Rules\Users.UseCases\Users.UseCases.csproj", "{EFB2B521-D9B5-46C8-A1D5-A5DA1FD8A681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.UseCasesPorts", "Users.UseCasesPorts\Users.UseCasesPorts.csproj", "{1C2D716C-221A-4D54-993D-0C08A532364C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.UseCasesPorts", "src\Application Business Rules\Users.UseCasesPorts\Users.UseCasesPorts.csproj", "{77212064-9609-4707-8F6C-F3564A615766}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,10 @@ Global
 		{EFB2B521-D9B5-46C8-A1D5-A5DA1FD8A681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFB2B521-D9B5-46C8-A1D5-A5DA1FD8A681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFB2B521-D9B5-46C8-A1D5-A5DA1FD8A681}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C2D716C-221A-4D54-993D-0C08A532364C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C2D716C-221A-4D54-993D-0C08A532364C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C2D716C-221A-4D54-993D-0C08A532364C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C2D716C-221A-4D54-993D-0C08A532364C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77212064-9609-4707-8F6C-F3564A615766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77212064-9609-4707-8F6C-F3564A615766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77212064-9609-4707-8F6C-F3564A615766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77212064-9609-4707-8F6C-F3564A615766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,7 +52,6 @@ Global
 		{13BAC74E-4FD6-4628-AD67-8904F0CD64B5} = {7F1C6577-5DBD-4DD9-85E0-8B1C5DE320A4}
 		{8AFD89A5-E98D-41DB-A387-AB3818B4D114} = {E69A8A6C-7E55-4566-B6C5-9570944C2B38}
 		{EFB2B521-D9B5-46C8-A1D5-A5DA1FD8A681} = {E69A8A6C-7E55-4566-B6C5-9570944C2B38}
-		{1C2D716C-221A-4D54-993D-0C08A532364C} = {E69A8A6C-7E55-4566-B6C5-9570944C2B38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8290FA69-8853-4DB6-A9D0-D5E9813FF4EF}
