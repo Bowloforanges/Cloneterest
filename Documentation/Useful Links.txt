@@ -1,0 +1,7 @@
+Idea:
+
+https://github.com/machadop1407/pinterest-clone-backend
+
+Cloud Image Hosting
+
+https://cloudinary.com/pricing
