@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interactors\" />
+    <ProjectReference Include="..\Users.UseCasesPorts\Users.UseCasesPorts.csproj" />
   </ItemGroup>
 
 </Project>

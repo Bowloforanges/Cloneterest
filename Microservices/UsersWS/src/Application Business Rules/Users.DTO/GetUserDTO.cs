@@ -9,9 +9,6 @@ namespace Users.DTO
     public class GetUserDTO : BaseDTO
     {
         public string UserId { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string GoogleId { get; set; }
+
     }
 }
