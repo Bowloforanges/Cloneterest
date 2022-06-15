@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Application Business Rules\Users.UseCases\Users.UseCases.csproj" />
+    <ProjectReference Include="..\Users.Presenters\Users.Presenters.csproj" />
   </ItemGroup>
 
 </Project>

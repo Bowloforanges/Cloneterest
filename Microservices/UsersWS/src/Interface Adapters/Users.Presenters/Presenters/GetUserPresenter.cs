@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Users.DTO;
 using Users.Presenters.Interfaces;
 using Users.UseCasesPorts.Interfaces;
 
 namespace Users.Presenters.Presenters
 {
-    public class GetUserPresenter : IGetUserOutputPort, IPresenter<TransactionResult>
+    public class GetUserPresenter : IGetUserOutputPort, IPresenter<UserDTO>
     {
-        public Task Handle()
+        public UserDTO Content { get; private set; }
+
+        public Task Handle(UserDTO user)
         {
-            throw new NotImplementedException();
+            Content = user;
+            return Task.CompletedTask;
         }
     }
 }

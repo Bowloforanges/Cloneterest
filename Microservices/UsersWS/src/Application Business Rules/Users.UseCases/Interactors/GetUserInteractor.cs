@@ -14,8 +14,12 @@ namespace Users.UseCases.Interactors
         public async Task Handle(GetUserDTO user)
         {
             System.Console.WriteLine($"----- GetUserInteractor - {user.UserId}");
+            //Validar user
+            //Hacer Query en DB
+            //Postear en MessageQueue
 
-            await _getUserOutputPort.Handle();
+            //Mappear aca el Usuario de DB a un dto para pasarselo al outputport, en vez de un user nuevo
+            await _getUserOutputPort.Handle(new UserDTO { UserId = "aaa", });
             await Task.CompletedTask;
         }
     }

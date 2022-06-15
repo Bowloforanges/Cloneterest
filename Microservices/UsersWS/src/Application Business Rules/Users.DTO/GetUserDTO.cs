@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Users.DTO
+﻿namespace Users.DTO
 {
 
     /// <summary>
