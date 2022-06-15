@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Interface Adapters\Users.Controllers\Users.Controllers.csproj" />
+    <ProjectReference Include="..\..\Interface Adapters\Users.IoC\Users.IoC.csproj" />
   </ItemGroup>
 
 </Project>

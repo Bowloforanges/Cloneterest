@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 using Users.DTO;
 using Users.UseCasesPorts.Interfaces;
@@ -9,13 +10,18 @@ namespace Users.Controllers
     [ApiController]
     public class GetUserController : ControllerBase
     {
-        private readonly IGenericInputPort<BaseDTO> _getUserInputPort;
-        public GetUserController(IGenericInputPort<BaseDTO> getUserInputPort) => (_getUserInputPort) = (getUserInputPort);
+        private readonly IGetUserInputPort _getUserInputPort;
+        public GetUserController(IGetUserInputPort getUserInputPort) => (_getUserInputPort) = (getUserInputPort);
 
-        [HttpGet]
-        public async Task<IActionResult> GetUser(GetUserDTO user) 
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetUser(string userId)
         {
-            await _getUserInputPort.Handle(user);
+            if (userId is null)
+            {
+                throw new ArgumentNullException(nameof(userId));
+            }
+
+            await _getUserInputPort.Handle(new GetUserDTO { UserId = userId });
             return Ok();
         }
     }

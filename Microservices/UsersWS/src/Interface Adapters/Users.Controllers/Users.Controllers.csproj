@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Application Business Rules\Users.UseCasesPorts\Users.UseCasesPorts.csproj" />
+    <ProjectReference Include="..\..\Enterprise Business Rules\Users.Utils\Users.Utils.csproj" />
   </ItemGroup>
 
 </Project>
