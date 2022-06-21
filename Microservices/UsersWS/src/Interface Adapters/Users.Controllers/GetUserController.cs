@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Users.DTO;
+using Users.Presenters.Interfaces;
 using Users.UseCasesPorts.Interfaces;
 
 namespace Users.Controllers
@@ -11,7 +13,13 @@ namespace Users.Controllers
     public class GetUserController : ControllerBase
     {
         private readonly IGetUserInputPort _getUserInputPort;
-        public GetUserController(IGetUserInputPort getUserInputPort) => (_getUserInputPort) = (getUserInputPort);
+        private readonly IGetUserOutputPort _getUserOutputPort;
+
+        private readonly IGetAllUsersInputPort _getAllUsersInputPort;
+        private readonly IGetAllUsersOutputPort _getAllUsersOutputPort;
+
+        public GetUserController(IGetUserInputPort getUserInputPort, IGetUserOutputPort getUserOutputPort, IGetAllUsersInputPort getAllUsersInputPort, IGetAllUsersOutputPort getAllUsersOutputPort) => 
+            (_getUserInputPort, _getUserOutputPort, _getAllUsersInputPort, _getAllUsersOutputPort) = (getUserInputPort, getUserOutputPort, getAllUsersInputPort, getAllUsersOutputPort);
 
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUser(string userId)
@@ -22,7 +30,20 @@ namespace Users.Controllers
             }
 
             await _getUserInputPort.Handle(new GetUserDTO { UserId = userId });
-            return Ok();
+            
+            var result = ((IPresenter<UserDTO>)_getUserOutputPort).Content;
+
+            return result == null ? NoContent() : Ok(result);
+        }
+
+        [HttpGet()]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            await _getAllUsersInputPort.Handle();
+
+            var result = ((IPresenter<IEnumerable<UserDTO>>)_getAllUsersOutputPort).Content;
+
+            return result == null ? NoContent() : Ok(result);
         }
     }
 }

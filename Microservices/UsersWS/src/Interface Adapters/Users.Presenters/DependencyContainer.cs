@@ -9,6 +9,8 @@ namespace Users.Presenters
         public static IServiceCollection AddPresenters(this IServiceCollection services)
         {
             services.AddScoped<IGetUserOutputPort, GetUserPresenter>();
+            services.AddScoped<IGetAllUsersOutputPort, GetAllUsersPresenter>();
+
             return services;
         }
     }

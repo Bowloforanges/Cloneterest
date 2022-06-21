@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Users.DTO;
 using Users.Presenters.Interfaces;
 using Users.UseCasesPorts.Interfaces;

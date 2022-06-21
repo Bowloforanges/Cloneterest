@@ -9,6 +9,8 @@ namespace Users.UseCases
         public static IServiceCollection AddUseCasesServices(this IServiceCollection services)
         {
             services.AddTransient<IGetUserInputPort, GetUserInteractor>();
+            services.AddTransient<IGetAllUsersInputPort, GetAllUsersInteractor>();
+
             return services;
         }
     }

@@ -5,6 +5,6 @@ namespace Users.UseCasesPorts.Interfaces
 {
     public interface IGetUserInputPort
     {
-        Task Handle(GetUserDTO user);
+        public Task Handle(GetUserDTO user);
     }
 }

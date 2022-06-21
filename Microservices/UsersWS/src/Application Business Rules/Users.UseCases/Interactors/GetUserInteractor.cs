@@ -13,7 +13,7 @@ namespace Users.UseCases.Interactors
 
         public async Task Handle(GetUserDTO user)
         {
-            System.Console.WriteLine($"----- GetUserInteractor - {user.UserId}");
+            System.Console.WriteLine($"----- GetUserInteractor Single User - {user.UserId}");
             //Validar user
             //Hacer Query en DB
             //Postear en MessageQueue
