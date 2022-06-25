@@ -10,10 +10,10 @@ namespace Users.Presenters.Presenters
     {
         public IEnumerable<UserDTO> Content { get; private set; }
 
-        public Task Handle(IEnumerable<UserDTO> users)
+        public async Task Handle(IEnumerable<UserDTO> users)
         {
             Content = users;
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
     }
 }

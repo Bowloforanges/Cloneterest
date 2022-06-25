@@ -21,6 +21,7 @@ namespace Users.Controllers
         public GetUserController(IGetUserInputPort getUserInputPort, IGetUserOutputPort getUserOutputPort, IGetAllUsersInputPort getAllUsersInputPort, IGetAllUsersOutputPort getAllUsersOutputPort) => 
             (_getUserInputPort, _getUserOutputPort, _getAllUsersInputPort, _getAllUsersOutputPort) = (getUserInputPort, getUserOutputPort, getAllUsersInputPort, getAllUsersOutputPort);
 
+        //GET /api/v1/Users/{userId} - Get existing user
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUser(string userId)
         {
@@ -36,6 +37,7 @@ namespace Users.Controllers
             return result == null ? NoContent() : Ok(result);
         }
 
+        //DELETE /api/v1/Users - Get all existing users (TODO: revisar paginacion)
         [HttpGet()]
         public async Task<IActionResult> GetAllUsers()
         {

@@ -10,6 +10,9 @@ namespace Users.UseCases
         {
             services.AddTransient<IGetUserInputPort, GetUserInteractor>();
             services.AddTransient<IGetAllUsersInputPort, GetAllUsersInteractor>();
+            services.AddTransient<ICreateUserInputPort, CreateOrUpdateUserInteractor>();
+            services.AddTransient<IUpdateUserInputPort, UpdateUserInteractor>();
+            services.AddTransient<IDeleteUserInputPort, DeleteUserInteractor>();
 
             return services;
         }

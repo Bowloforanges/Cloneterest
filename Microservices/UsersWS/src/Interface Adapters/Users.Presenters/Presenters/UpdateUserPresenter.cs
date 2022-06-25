@@ -5,9 +5,14 @@ using Users.UseCasesPorts.Interfaces;
 
 namespace Users.Presenters.Presenters
 {
-    public class GetUserPresenter : IGetUserOutputPort, IPresenter<UserDTO>
+    public class UpdateUserPresenter : IUpdateUserOutputPort, IPresenter<UserDTO>
     {
         public UserDTO Content { get; private set; }
+
+        public UpdateUserPresenter()
+        {
+
+        }
 
         public async Task Handle(UserDTO user)
         {

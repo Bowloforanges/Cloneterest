@@ -10,6 +10,8 @@ namespace Users.Presenters
         {
             services.AddScoped<IGetUserOutputPort, GetUserPresenter>();
             services.AddScoped<IGetAllUsersOutputPort, GetAllUsersPresenter>();
+            services.AddScoped<ICreateUserOutputPort, CreateUserPresenter>();
+            services.AddScoped<IUpdateUserOutputPort, UpdateUserPresenter>();
 
             return services;
         }
