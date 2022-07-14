@@ -19,9 +19,9 @@ namespace Users.UseCases.Interactors
             //Hacer Query en DB
             List<UserDTO> result = new List<UserDTO>();
 
-            result.Append(new UserDTO { UserId = "aaa" });
-            result.Append(new UserDTO { UserId = "bbb" });
-            result.Append(new UserDTO { UserId = "ccc" });
+            result.Add(new UserDTO() { UserId = "aaa" });
+            result.Add(new UserDTO() { UserId = "bbb" });
+            result.Add(new UserDTO() { UserId = "ccc" });
 
             //Postear en MessageQueue
 

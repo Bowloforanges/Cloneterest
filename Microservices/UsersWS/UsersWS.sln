@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Presenters", "src\Int
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.IoC", "src\Interface Adapters\Users.IoC\Users.IoC.csproj", "{752698F9-3DD2-4689-ADC4-A6FA5ECCE496}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Mongo", "src\Interface Adapters\Users.Mongo\Users.Mongo.csproj", "{2609C8E7-AE1E-4AE1-AB03-4C7CCA3FEB80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{752698F9-3DD2-4689-ADC4-A6FA5ECCE496}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{752698F9-3DD2-4689-ADC4-A6FA5ECCE496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{752698F9-3DD2-4689-ADC4-A6FA5ECCE496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2609C8E7-AE1E-4AE1-AB03-4C7CCA3FEB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2609C8E7-AE1E-4AE1-AB03-4C7CCA3FEB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2609C8E7-AE1E-4AE1-AB03-4C7CCA3FEB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2609C8E7-AE1E-4AE1-AB03-4C7CCA3FEB80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{A0EB5744-2A99-4D29-83F1-8F42235E694B} = {E1236396-80DD-4AD2-8BD6-1F200A96905E}
 		{B599EC22-7144-484B-8CEE-7F01FE545066} = {2BE745A1-2099-4A64-B387-9E92D206771E}
 		{752698F9-3DD2-4689-ADC4-A6FA5ECCE496} = {207F87AA-98A5-467B-A16E-9D8FDD9BDC22}
+		{2609C8E7-AE1E-4AE1-AB03-4C7CCA3FEB80} = {207F87AA-98A5-467B-A16E-9D8FDD9BDC22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8290FA69-8853-4DB6-A9D0-D5E9813FF4EF}

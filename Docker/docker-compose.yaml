@@ -1,0 +1,35 @@
+version: "3.0"
+
+services:
+
+  mongo_users_ws:
+    image: mongo
+    container_name: mongo_db_users
+    ports:
+      - 27017:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: mongoadmin
+    volumes:
+      - mongodbdata_users:/data/mongo_db
+
+  mongoexpress_users_ws:
+    image: mongo-express
+    container_name: mongo_express
+    restart: unless-stopped
+    ports:
+      - 8081:8081
+    depends_on:
+      - mongo_users_ws
+    environment:
+      ME_CONFIG_OPTIONS_EDITORTHEME: 3024-night
+      ME_CONFIG_MONGODB_ADMINUSERNAME: mongoadmin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: mongoadmin
+      ME_CONFIG_MONGODB_SERVER: mongo_users_ws, mongo_pins_ws
+
+volumes:
+
+  mongodbdata_users:
+
+
